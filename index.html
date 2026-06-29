@@ -1,52 +1,34 @@
 <!doctype html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Parole Liquide — Le parole della tua vita</title>
-  <meta name="description" content="Ci sono parole che leggiamo. E parole che ci leggono.">
-  <style>
-    :root{--bg:#11100d;--paper:#f5efe6;--gold:#c4a25d;--soft:#d8cbb8;--muted:#9f927d;--line:rgba(196,162,93,.32)}
-    *{box-sizing:border-box}
-    body{margin:0;background:radial-gradient(circle at 50% 0%,rgba(196,162,93,.18),transparent 34%),var(--bg);color:var(--paper);font-family:Georgia,"Times New Roman",serif}
-    main{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:42px 22px}
-    .page{width:100%;max-width:760px;text-align:center}
-    .brand{letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-size:clamp(28px,6vw,56px);line-height:1.12;font-weight:400;margin:0}
-    .payoff{margin:16px 0 70px;color:var(--soft);letter-spacing:.12em;text-transform:uppercase;font-size:13px}
-    .statement{font-size:clamp(30px,6vw,62px);line-height:1.08;font-weight:400;margin:0 0 74px}.statement span{color:var(--gold)}
-    .text{max-width:620px;margin:0 auto;color:var(--soft);font-size:clamp(20px,2.6vw,27px);line-height:1.52}.text p{margin:0 0 24px}.text .short{margin-bottom:10px}
-    .question{margin:64px auto;padding:34px 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);color:var(--paper);font-size:clamp(27px,4vw,44px);line-height:1.18}
-    .ending{color:var(--gold);font-size:clamp(24px,3.6vw,38px);line-height:1.2;margin:0 0 74px}
-    .footer{color:var(--muted);font-size:16px;line-height:1.7}.footer strong{display:block;color:var(--soft);font-weight:400;font-size:18px;margin-bottom:6px}
-    .actions{margin-top:24px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-    a{color:inherit;text-decoration:none}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--line);color:var(--soft);letter-spacing:.08em;text-transform:uppercase;font-size:12px}.btn.primary{background:linear-gradient(135deg,#d8bc77,#a98643);border-color:transparent;color:#17130f;font-weight:700}
-    @media(max-width:640px){main{padding:34px 18px}.payoff{margin-bottom:54px}.statement{margin-bottom:56px}.question{margin:48px auto}.ending{margin-bottom:56px}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parole Liquide — Le parole della tua vita</title>
+<meta name="description" content="Parole Liquide: esperienza elegante per wedding, luxury party e corporate.">
+<style>
+:root{--bg:#080806;--paper:#f4ead7;--gold:#c49a45;--gold2:#dfc274;--muted:#cfc1a8;--line:rgba(196,154,69,.34)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#080806;color:var(--paper);font-family:Georgia,"Times New Roman",serif}a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+header{position:fixed;top:0;left:0;right:0;z-index:10;background:linear-gradient(180deg,rgba(8,8,6,.94),rgba(8,8,6,.58),transparent);padding:22px 0 34px}.nav{display:flex;align-items:center;justify-content:space-between}.brand{letter-spacing:.22em;text-transform:uppercase;color:var(--gold2);font-size:20px;line-height:1.1}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.18em;margin-top:8px}.navlinks{display:flex;gap:24px;align-items:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;border:1px solid var(--line);color:var(--gold2);letter-spacing:.12em;text-transform:uppercase;font-size:12px;background:rgba(8,8,6,.45);cursor:pointer}.btn.primary{background:linear-gradient(135deg,#d8bd75,#a77c2e);color:#120f0a;border-color:transparent;font-weight:700}
+.hero{min-height:100vh;padding:132px 0 72px;background:radial-gradient(circle at 72% 44%,rgba(196,154,69,.18),transparent 30%),linear-gradient(180deg,#0b0a08,#080806);position:relative;overflow:hidden}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,6,.96) 0%,rgba(8,8,6,.76) 34%,rgba(8,8,6,.22) 72%,rgba(8,8,6,.82) 100%)}.hero>.wrap{position:relative;z-index:2;display:grid;grid-template-columns:.78fr 1.22fr;gap:40px;align-items:center}
+h1{margin:0;font-size:clamp(42px,6vw,74px);line-height:1.03;font-weight:400}.lead{margin:34px 0 0;color:var(--muted);font-size:20px;line-height:1.6;max-width:460px}.lead strong{color:var(--paper);font-weight:400}.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.stage{min-height:620px;position:relative}.wordwall{position:absolute;inset:0 0 170px 0;display:grid;grid-template-columns:repeat(6,1fr);gap:16px}.card{background:linear-gradient(180deg,#e8d2a2,#cda762);color:#18120b;min-height:86px;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 18px 40px rgba(0,0,0,.45);position:relative}.card:before{content:"";position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:9px;height:15px;background:#16120d;border-radius:2px}
+.side{position:absolute;right:0;top:22px;bottom:130px;width:90px;display:grid;grid-template-columns:repeat(2,1fr);gap:13px;opacity:.72}.mini{height:50px;border:1px solid rgba(223,194,116,.38);border-radius:16px 16px 8px 8px;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(196,154,69,.34));box-shadow:0 0 22px rgba(196,154,69,.28)}
+.table{position:absolute;left:0;right:0;bottom:0;height:250px;background:linear-gradient(180deg,rgba(50,31,15,.55),rgba(17,10,5,.95));border-top:1px solid rgba(196,154,69,.22)}.flasks{position:absolute;bottom:98px;left:34%;display:flex;gap:28px;align-items:end}.flask{width:116px;height:190px;border:1px solid rgba(244,234,215,.42);border-radius:52px 52px 34px 34px;background:linear-gradient(90deg,rgba(255,255,255,.22),rgba(255,255,255,.04),rgba(255,255,255,.18));position:relative;box-shadow:0 20px 55px rgba(0,0,0,.52)}.flask:before{content:"";position:absolute;top:-76px;left:42px;width:32px;height:88px;border:1px solid rgba(244,234,215,.45);border-bottom:0;background:rgba(255,255,255,.05)}.liquid{position:absolute;left:10px;right:10px;bottom:10px;height:74px;border-radius:20px 20px 28px 28px;background:rgba(221,180,80,.55)}.red .liquid{background:rgba(150,28,22,.72)}.clear .liquid{background:rgba(239,220,165,.28)}
+.tablet{position:absolute;bottom:48px;left:4%;width:330px;height:210px;border:10px solid #080806;border-radius:18px;background:#12110f;box-shadow:0 22px 60px rgba(0,0,0,.62);transform:rotate(-3deg)}.screen{padding:22px;color:var(--gold2);font-size:12px;letter-spacing:.15em;text-transform:uppercase}.gauge{position:absolute;bottom:40px;right:18%;width:190px;height:28px;background:#080806;border-radius:999px;border:1px solid rgba(223,194,116,.3);transform:rotate(-9deg)}.gauge:before{content:"";position:absolute;right:38px;top:-22px;width:62px;height:62px;border-radius:50%;border:1px solid rgba(223,194,116,.35);background:#16120d}
+section{padding:82px 0;border-top:1px solid rgba(196,154,69,.18)}.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}h2{font-size:clamp(34px,4.6vw,58px);line-height:1.08;font-weight:400;margin:0}.copy{color:var(--muted);font-size:21px;line-height:1.6}.copy p:first-child{margin-top:0}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:34px}.step{border-top:1px solid var(--line);padding-top:22px}.step b{display:block;color:var(--gold2);font-weight:400;letter-spacing:.16em;text-transform:uppercase;font-size:12px;margin-bottom:14px}.step span{color:var(--muted);line-height:1.45;font-size:16px}
+.contact{background:#0d0c0a}form{display:grid;gap:14px}input,textarea,select{width:100%;background:rgba(244,234,215,.06);border:1px solid rgba(196,154,69,.28);color:var(--paper);padding:15px 14px;font:16px Georgia,"Times New Roman",serif;outline:none;border-radius:0}textarea{min-height:130px;resize:vertical}input::placeholder,textarea::placeholder{color:#8e826f}.fine{font-size:12px;color:#8e826f;line-height:1.45}footer{padding:28px 0;color:#8e826f;border-top:1px solid rgba(196,154,69,.18);font-size:14px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:980px){header{position:static;padding:18px 0}.navlinks{display:none}.hero{padding:42px 0 0}.hero>.wrap{display:block}.stage{min-height:560px;margin-top:42px}.wordwall{grid-template-columns:repeat(3,1fr);inset:0 0 185px 0}.card{font-size:18px;min-height:70px}.side{display:none}.flasks{left:12%;bottom:105px;gap:14px}.flask{width:90px;height:150px}.flask:before{left:32px}.tablet{width:250px;height:160px;bottom:38px}.gauge{right:5%;bottom:36px;width:130px}.split{grid-template-columns:1fr;gap:28px}.steps{grid-template-columns:1fr 1fr}section{padding:58px 0}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}.wordwall{gap:10px}.card:nth-child(n+13){display:none}.flasks{display:none}.tablet{left:0;right:0;margin:auto;transform:none}.hero:after{background:linear-gradient(180deg,rgba(8,8,6,.55),rgba(8,8,6,.92))}}
+</style>
 </head>
 <body>
-  <main>
-    <section class="page">
-      <h1 class="brand">Parole<br>Liquide</h1>
-      <div class="payoff">Le parole della tua vita</div>
-      <h2 class="statement">Ci sono parole che leggiamo.<br>E parole che <span>ci leggono.</span></h2>
-      <div class="text">
-        <p>Per qualche minuto hai tenuto tra le mani alcune parole.</p>
-        <p class="short">Una dopo l’altra.</p>
-        <p class="short">Alcune hanno lasciato il corpo quasi indifferente.</p>
-        <p>Altre hanno cambiato qualcosa.</p>
-        <p>Non sappiamo perché.</p>
-        <p>Sappiamo solo che è successo.</p>
-      </div>
-      <div class="question">La boccetta che hai portato con te non contiene risposte.<br><br>Contiene un promemoria.</div>
-      <div class="text"><p>Ogni volta che la guarderai potrai chiederti:</p></div>
-      <div class="question">Questa parola è ancora viva dentro di me?</div>
-      <div class="ending">Le parole cambiano.<br>Anche noi.</div>
-      <div class="footer">
-        <strong>Paolo Musetti</strong>
-        paroleliquide.it
-        <div class="actions"><a class="btn primary" href="https://wa.me/393282924284" target="_blank" rel="noopener">WhatsApp</a></div>
-      </div>
-    </section>
-  </main>
+<header><div class="wrap nav"><a class="brand" href="#top">Parole<br>Liquide<small>Le parole della tua vita</small></a><nav class="navlinks"><a href="#esperienza">Esperienza</a><a href="#eventi">Eventi</a><a href="#contatti" class="btn">Richiedi informazioni</a></nav></div></header>
+<main id="top">
+<section class="hero"><div class="wrap"><div><h1>Un incontro<br>con le parole<br>che ti riguardano.</h1><p class="lead">Parole Liquide è un'esperienza elegante per wedding, luxury party e corporate.<br><br><strong>Ci sono parole che leggiamo. E parole che ci leggono.</strong></p><div class="cta"><a href="#contatti" class="btn primary">Richiedi informazioni</a><a href="#esperienza" class="btn">Scopri l'esperienza</a></div></div><div class="stage" aria-label="Postazione Parole Liquide"><div class="wordwall"><div class="card">fiducia</div><div class="card">coraggio</div><div class="card">scelta</div><div class="card">libertà</div><div class="card">verità</div><div class="card">sogno</div><div class="card">intuito</div><div class="card">legame</div><div class="card">luce</div><div class="card">memoria</div><div class="card">equilibrio</div><div class="card">tempo</div><div class="card">presenza</div><div class="card">ascolto</div><div class="card">amore</div><div class="card">casa</div><div class="card">cura</div><div class="card">risveglio</div></div><div class="side"><span class="mini"></span><span class="mini"></span><span class="mini"></span><span class="mini"></span><span class="mini"></span><span class="mini"></span><span class="mini"></span><span class="mini"></span></div><div class="table"></div><div class="flasks"><div class="flask clear"><div class="liquid"></div></div><div class="flask"><div class="liquid"></div></div><div class="flask red"><div class="liquid"></div></div></div><div class="tablet"><div class="screen">Parole Liquide<br><br>Test di risonanza<br><br>Fiducia<br><br>2,8</div></div><div class="gauge"></div></div></div></section>
+<section id="esperienza"><div class="wrap split"><h2>Non è uno spettacolo da guardare.<br>È una piccola esperienza da vivere.</h2><div class="copy"><p>Il consultante incontra alcune parole, le tiene tra le mani e osserva la propria risposta corporea.</p><p>Alla fine porta con sé una Traccia personale: tre parole, una boccetta, uno scontrino.</p></div></div><div class="wrap steps"><div class="step"><b>01. Ascolto</b><span>Una breve accoglienza, senza spiegare troppo.</span></div><div class="step"><b>02. Parole</b><span>Parole sensibili e parole-risorsa vengono testate.</span></div><div class="step"><b>03. Traccia</b><span>Emergono le tre parole da portare con sé.</span></div><div class="step"><b>04. Ricordo</b><span>La boccetta diventa un oggetto personale dell'esperienza.</span></div></div></section>
+<section id="eventi"><div class="wrap split"><h2>Per wedding, luxury party e corporate.</h2><div class="copy"><p>Una postazione scenografica, fotografabile, silenziosa e curiosa.</p><p>Ideale quando vuoi offrire agli ospiti qualcosa di personale, elegante e diverso dal solito intrattenimento.</p></div></div></section>
+<section id="contatti" class="contact"><div class="wrap split"><div><h2>Richiedi informazioni.</h2><div class="copy"><p>Scrivi per disponibilità, formule evento e collaborazioni con agenzie.</p><p>Paolo Musetti<br>paroleliquide.it</p></div></div><form action="https://formsubmit.co/magopaolo@libero.it" method="POST"><input type="hidden" name="_subject" value="Nuova richiesta da paroleliquide.it"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><input type="text" name="nome" placeholder="Nome e cognome" required><input type="email" name="email" placeholder="Email" required><input type="tel" name="telefono" placeholder="Telefono / WhatsApp"><select name="tipo_evento"><option value="">Tipo di evento</option><option>Wedding</option><option>Luxury party</option><option>Corporate</option><option>Agenzia eventi</option><option>Altro</option></select><textarea name="messaggio" placeholder="Raccontami data, luogo e tipo di evento"></textarea><button class="btn primary" type="submit">Invia richiesta</button><div class="fine">Il form invia la richiesta a magopaolo@libero.it tramite servizio esterno per siti statici. Alla prima richiesta potrebbe essere necessaria una conferma via email.</div></form></div></section>
+</main><footer><div class="wrap foot"><div>© Parole Liquide — Paolo Musetti</div><div>WhatsApp: +39 328 292 4284</div></div></footer>
 </body>
 </html>
