@@ -4,95 +4,321 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Parole Liquide — Le parole della tua vita</title>
-  <meta name="description" content="Parole Liquide è un'esperienza elegante per wedding, luxury party e corporate.">
+  <meta name="description" content="Parole Liquide è un'esperienza elegante, personale e memorabile per wedding, luxury party e corporate.">
   <style>
     :root{
-      --bg:#090806;
-      --paper:#f3ead9;
-      --muted:#cfbea1;
-      --gold:#d8b66a;
-      --line:rgba(216,182,106,.24);
-      --card:rgba(255,255,255,.03);
+      --bg:#070605;
+      --bg-soft:#0d0b08;
+      --paper:#f4ead9;
+      --muted:#cbb99b;
+      --muted2:#9d8e75;
+      --gold:#d9b96f;
+      --gold-soft:#b98937;
+      --line:rgba(217,185,111,.22);
+      --card:rgba(255,255,255,.035);
+      --shadow:0 24px 80px rgba(0,0,0,.38);
+      --serif:Georgia,"Times New Roman",serif;
     }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--paper);font-family:Georgia,"Times New Roman",serif}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--paper);
+      font-family:var(--serif);
+      text-rendering:optimizeLegibility;
+      -webkit-font-smoothing:antialiased;
+    }
     img{max-width:100%;display:block}
     a{color:inherit;text-decoration:none}
+
     .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
     header{
-      position:fixed;inset:0 0 auto 0;z-index:20;
-      background:linear-gradient(180deg,rgba(9,8,6,.96),rgba(9,8,6,.50),transparent);
-      padding:22px 0 34px;
+      position:fixed;
+      inset:0 0 auto 0;
+      z-index:20;
+      padding:24px 0 48px;
+      background:linear-gradient(180deg,rgba(7,6,5,.96),rgba(7,6,5,.55),transparent);
     }
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{color:var(--gold);text-transform:uppercase;letter-spacing:.22em;font-size:20px;line-height:1.05}
-    .brand small{display:block;font-size:10px;color:var(--muted);letter-spacing:.16em;margin-top:8px}
-    .navlinks{display:flex;gap:24px;align-items:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+    .nav{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:24px;
+    }
+    .brand{
+      color:var(--gold);
+      text-transform:uppercase;
+      letter-spacing:.24em;
+      font-size:20px;
+      line-height:1.06;
+      text-shadow:0 1px 18px rgba(0,0,0,.5);
+    }
+    .brand small{
+      display:block;
+      font-size:10px;
+      color:var(--paper);
+      opacity:.82;
+      letter-spacing:.17em;
+      margin-top:8px;
+    }
+    .navlinks{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:rgba(244,234,217,.84);
+    }
+    .navlinks a{
+      padding:12px 0;
+      transition:color .22s ease, opacity .22s ease;
+    }
     .navlinks a:hover{color:var(--gold)}
+    .navlinks .outline{
+      border:1px solid var(--line);
+      padding:14px 22px;
+      color:var(--gold);
+      background:rgba(7,6,5,.28);
+      backdrop-filter:blur(4px);
+    }
+
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 20px;
-      border:1px solid var(--line);color:var(--gold);font-size:12px;letter-spacing:.12em;
-      text-transform:uppercase;background:rgba(9,8,6,.42);cursor:pointer
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:46px;
+      padding:0 22px;
+      border:1px solid var(--line);
+      color:var(--gold);
+      font-size:12px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      background:rgba(7,6,5,.40);
+      transition:transform .22s ease, box-shadow .22s ease, background .22s ease, border-color .22s ease;
+      cursor:pointer;
     }
-    .btn.primary{background:linear-gradient(135deg,#dfc57c,#ae7f2e);color:#120f0a;border-color:transparent;font-weight:700}
+    .btn:hover{
+      transform:translateY(-1px);
+      box-shadow:0 14px 36px rgba(0,0,0,.28);
+      border-color:rgba(217,185,111,.48);
+    }
+    .btn.primary{
+      background:linear-gradient(135deg,#e1c77d,#b18436);
+      color:#100d08;
+      border-color:transparent;
+      font-weight:700;
+    }
+
     .hero{
+      position:relative;
       min-height:100vh;
+      overflow:hidden;
       background:
-        linear-gradient(90deg,rgba(9,8,6,.95) 0%,rgba(9,8,6,.88) 24%,rgba(9,8,6,.55) 48%,rgba(9,8,6,.18) 73%,rgba(9,8,6,.08) 100%),
+        linear-gradient(90deg,rgba(7,6,5,.96) 0%,rgba(7,6,5,.90) 24%,rgba(7,6,5,.58) 45%,rgba(7,6,5,.18) 72%,rgba(7,6,5,.10) 100%),
         url('hero-postazione.png') center center / cover no-repeat;
-      display:flex;align-items:center;
     }
-    .hero .wrap{width:100%;max-width:1280px;padding:0 34px}
-    .hero-inner{padding:148px 0 88px;max-width:460px;width:100%}
-    h1{margin:0;max-width:430px;font-size:clamp(44px,5.1vw,76px);line-height:.98;font-weight:400}
-    .eyebrow{color:var(--gold);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
-    .lead{max-width:430px;margin:28px 0 0;font-size:19px;line-height:1.55;color:var(--muted)}
-    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
-    section{padding:88px 0;border-top:1px solid var(--line)}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-    h2{margin:0;font-size:clamp(34px,4.4vw,58px);line-height:1.08;font-weight:400}
-    .copy{font-size:21px;line-height:1.65;color:var(--muted)}
+    .hero:after{
+      content:"";
+      position:absolute;
+      inset:auto 0 0 0;
+      height:32vh;
+      background:linear-gradient(180deg,transparent,rgba(7,6,5,.92));
+      pointer-events:none;
+    }
+    .hero-inner{
+      position:absolute;
+      left:clamp(30px,7vw,124px);
+      top:54%;
+      transform:translateY(-50%);
+      z-index:2;
+      width:min(430px,calc(100vw - 60px));
+      animation:fadeUp .7s ease-out both;
+    }
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(-46%) translateX(-10px)}
+      to{opacity:1;transform:translateY(-50%) translateX(0)}
+    }
+    .eyebrow{
+      color:var(--gold);
+      font-size:12px;
+      letter-spacing:.20em;
+      text-transform:uppercase;
+      margin-bottom:16px;
+    }
+    h1{
+      margin:0;
+      font-size:clamp(42px,4.75vw,72px);
+      line-height:.99;
+      font-weight:400;
+      letter-spacing:.01em;
+      text-shadow:0 2px 34px rgba(0,0,0,.56);
+    }
+    .lead{
+      margin:28px 0 0;
+      font-size:19px;
+      line-height:1.58;
+      color:var(--muted);
+      max-width:390px;
+      text-shadow:0 2px 20px rgba(0,0,0,.55);
+    }
+    .cta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:34px;
+    }
+
+    section{
+      padding:96px 0;
+      border-top:1px solid var(--line);
+      background:
+        radial-gradient(circle at 18% 0%,rgba(217,185,111,.08),transparent 34%),
+        var(--bg);
+    }
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:64px;
+      align-items:center;
+    }
+    h2{
+      margin:0;
+      font-size:clamp(34px,4.2vw,56px);
+      line-height:1.08;
+      font-weight:400;
+      letter-spacing:.005em;
+    }
+    .copy{
+      font-size:21px;
+      line-height:1.65;
+      color:var(--muted);
+    }
     .copy p:first-child{margin-top:0}
-    .visual{border:1px solid var(--line);background:var(--card);padding:12px}
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:30px}
-    .step{border-top:1px solid var(--line);padding-top:18px}
-    .step b{display:block;color:var(--gold);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:400;margin-bottom:12px}
-    .step span{display:block;color:var(--muted);font-size:16px;line-height:1.48}
-    .contact{background:#0d0c0a}
+    .visual{
+      border:1px solid var(--line);
+      background:var(--card);
+      padding:12px;
+      box-shadow:var(--shadow);
+    }
+    .visual img{
+      width:100%;
+      height:auto;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:38px;
+    }
+    .step{
+      border-top:1px solid var(--line);
+      padding-top:18px;
+    }
+    .step b{
+      display:block;
+      color:var(--gold);
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      font-weight:400;
+      margin-bottom:12px;
+    }
+    .step span{
+      display:block;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.5;
+    }
+
+    .contact{
+      background:
+        radial-gradient(circle at 70% 20%,rgba(217,185,111,.08),transparent 34%),
+        var(--bg-soft);
+    }
     form{display:grid;gap:14px}
     input,textarea,select{
-      width:100%;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--paper);
-      padding:15px 14px;font:16px Georgia,"Times New Roman",serif;outline:none
+      width:100%;
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      color:var(--paper);
+      padding:15px 14px;
+      font:16px var(--serif);
+      outline:none;
+      border-radius:0;
+    }
+    input:focus,textarea:focus,select:focus{
+      border-color:rgba(217,185,111,.58);
+      box-shadow:0 0 0 3px rgba(217,185,111,.08);
     }
     textarea{min-height:130px;resize:vertical}
-    input::placeholder,textarea::placeholder{color:#97866a}
-    .fine{font-size:12px;line-height:1.5;color:#9f8e73}
-    footer{padding:28px 0;border-top:1px solid var(--line);color:#98886f;font-size:14px}
-    .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    input::placeholder,textarea::placeholder{color:var(--muted2)}
+    .fine{
+      font-size:12px;
+      line-height:1.5;
+      color:var(--muted2);
+    }
+
+    footer{
+      padding:30px 0;
+      border-top:1px solid var(--line);
+      color:var(--muted2);
+      font-size:14px;
+      background:#050403;
+    }
+    .foot{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
     @media(max-width:980px){
-      header{position:static;padding:18px 0}
+      header{position:static;padding:18px 0;background:#070605}
       .navlinks{display:none}
-      .hero{min-height:auto;background-position:62% center}
-      .hero .wrap{padding:0 24px}
-      .hero-inner{padding:58px 0 64px;max-width:100%}
-      h1{max-width:100%}
-      .lead{max-width:100%}
-      .grid-2{grid-template-columns:1fr;gap:28px}
-      section{padding:62px 0}
+      .hero{
+        min-height:760px;
+        background:
+          linear-gradient(90deg,rgba(7,6,5,.92),rgba(7,6,5,.70) 42%,rgba(7,6,5,.28)),
+          url('hero-postazione.png') 64% center / cover no-repeat;
+      }
+      .hero-inner{
+        left:24px;
+        top:55%;
+        width:min(440px,calc(100vw - 48px));
+      }
+      .grid-2{grid-template-columns:1fr;gap:34px}
+      section{padding:68px 0}
       .steps{grid-template-columns:1fr 1fr}
     }
+
     @media(max-width:560px){
       .wrap{padding:0 18px}
+      .hero{
+        min-height:720px;
+        background:
+          linear-gradient(180deg,rgba(7,6,5,.32),rgba(7,6,5,.96) 68%),
+          url('hero-postazione.png') 69% top / auto 58% no-repeat;
+      }
+      .hero-inner{
+        position:relative;
+        left:auto;
+        top:auto;
+        transform:none;
+        padding:340px 18px 58px;
+        width:100%;
+        animation:none;
+      }
+      h1{font-size:42px}
       .lead{font-size:18px}
       .copy{font-size:18px}
       .steps{grid-template-columns:1fr}
-      .cta{flex-direction:column;align-items:flex-start}
-      .hero{
-        background:
-          linear-gradient(180deg,rgba(9,8,6,.50),rgba(9,8,6,.95)),
-          url('hero-postazione.png') 70% center / cover no-repeat;
-      }
+      .cta{align-items:flex-start}
+      .btn{width:auto}
     }
   </style>
 </head>
@@ -103,26 +329,24 @@
     <nav class="navlinks">
       <a href="#esperienza">Esperienza</a>
       <a href="#boccetta">La Traccia</a>
-      <a href="#contatti" class="btn">Richiedi informazioni</a>
+      <a href="#contatti" class="outline">Richiedi informazioni</a>
     </nav>
   </div>
 </header>
 
 <main id="top">
   <section class="hero">
-    <div class="wrap">
-      <div class="hero-inner">
-        <div class="eyebrow">Wedding · Luxury party · Corporate</div>
-        <h1>Un incontro<br>con le parole<br>che ti riguardano.</h1>
-        <div class="lead">
-          Parole Liquide è un'esperienza elegante, personale e memorabile.
-          <br><br>
-          Ci sono parole che leggiamo. E parole che ci leggono.
-        </div>
-        <div class="cta">
-          <a href="#contatti" class="btn primary">Richiedi informazioni</a>
-          <a href="#esperienza" class="btn">Scopri l'esperienza</a>
-        </div>
+    <div class="hero-inner">
+      <div class="eyebrow">Wedding · Luxury party · Corporate</div>
+      <h1>Un incontro<br>con le parole<br>che ti riguardano.</h1>
+      <div class="lead">
+        Parole Liquide è un'esperienza elegante, personale e memorabile.
+        <br><br>
+        Ci sono parole che leggiamo. E parole che ci leggono.
+      </div>
+      <div class="cta">
+        <a href="#contatti" class="btn primary">Richiedi informazioni</a>
+        <a href="#esperienza" class="btn">Scopri l'esperienza</a>
       </div>
     </div>
   </section>
