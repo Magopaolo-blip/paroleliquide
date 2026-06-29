@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Parole Liquide — Le parole della tua vita</title>
-  <meta name="description" content="Parole Liquide è un'esperienza elegante, personale e memorabile per wedding, luxury party e corporate.">
+  <meta name="description" content="Parole Liquide è un'esperienza elegante, personale e memorabile per wedding, private party e corporate.">
   <style>
     :root{
-      --bg:#070605;
-      --bg-soft:#0d0b08;
+      --bg:#080705;
+      --bg-soft:#100d09;
       --paper:#f4ead9;
       --muted:#cbb99b;
       --muted2:#9d8e75;
@@ -24,7 +24,9 @@
     html{scroll-behavior:smooth}
     body{
       margin:0;
-      background:var(--bg);
+      background:
+        radial-gradient(circle at 50% -12%, rgba(217,185,111,.10), transparent 34%),
+        linear-gradient(180deg,#0a0806 0%,#050403 100%);
       color:var(--paper);
       font-family:var(--serif);
       text-rendering:optimizeLegibility;
@@ -40,7 +42,7 @@
       inset:0 0 auto 0;
       z-index:20;
       padding:24px 0 48px;
-      background:linear-gradient(180deg,rgba(7,6,5,.96),rgba(7,6,5,.55),transparent);
+      background:linear-gradient(180deg,rgba(8,7,5,.94),rgba(8,7,5,.58),transparent);
     }
     .nav{
       display:flex;
@@ -118,7 +120,7 @@
       min-height:100vh;
       overflow:hidden;
       background:
-        linear-gradient(90deg,rgba(7,6,5,.96) 0%,rgba(7,6,5,.90) 24%,rgba(7,6,5,.58) 45%,rgba(7,6,5,.18) 72%,rgba(7,6,5,.10) 100%),
+        linear-gradient(90deg,rgba(8,7,5,.90) 0%,rgba(8,7,5,.76) 24%,rgba(8,7,5,.42) 48%,rgba(8,7,5,.10) 78%,rgba(8,7,5,.04) 100%),
         url('hero-postazione.png') center center / cover no-repeat;
     }
     .hero:after{
@@ -126,7 +128,7 @@
       position:absolute;
       inset:auto 0 0 0;
       height:32vh;
-      background:linear-gradient(180deg,transparent,rgba(7,6,5,.92));
+      background:linear-gradient(180deg,transparent,rgba(8,7,5,.86));
       pointer-events:none;
     }
     .hero-inner{
@@ -173,11 +175,11 @@
     }
 
     section{
-      padding:96px 0;
+      padding:86px 0;
       border-top:1px solid var(--line);
       background:
-        radial-gradient(circle at 18% 0%,rgba(217,185,111,.08),transparent 34%),
-        var(--bg);
+        radial-gradient(circle at 18% 0%,rgba(217,185,111,.10),transparent 34%),
+        linear-gradient(180deg,#0a0806 0%,var(--bg) 100%);
     }
     .grid-2{
       display:grid;
@@ -207,6 +209,7 @@
     .visual img{
       width:100%;
       height:auto;
+      filter:brightness(1.12) contrast(1.03) saturate(1.04);
     }
 
     .steps{
@@ -237,8 +240,8 @@
 
     .contact{
       background:
-        radial-gradient(circle at 70% 20%,rgba(217,185,111,.08),transparent 34%),
-        var(--bg-soft);
+        radial-gradient(circle at 70% 20%,rgba(217,185,111,.11),transparent 34%),
+        linear-gradient(180deg,var(--bg-soft),#070605);
     }
     form{display:grid;gap:14px}
     input,textarea,select{
@@ -282,12 +285,12 @@
     }
 
     @media(max-width:980px){
-      header{position:static;padding:18px 0;background:#070605}
+      header{position:static;padding:16px 0;background:#080705;border-bottom:1px solid var(--line)}
       .navlinks{display:none}
       .hero{
         min-height:760px;
         background:
-          linear-gradient(90deg,rgba(7,6,5,.92),rgba(7,6,5,.70) 42%,rgba(7,6,5,.28)),
+          linear-gradient(90deg,rgba(8,7,5,.76),rgba(8,7,5,.50) 42%,rgba(8,7,5,.14)),
           url('hero-postazione.png') 64% center / cover no-repeat;
       }
       .hero-inner{
@@ -296,33 +299,55 @@
         width:min(440px,calc(100vw - 48px));
       }
       .grid-2{grid-template-columns:1fr;gap:34px}
-      section{padding:68px 0}
+      section{padding:60px 0}
       .steps{grid-template-columns:1fr 1fr}
     }
 
     @media(max-width:560px){
-      .wrap{padding:0 18px}
+      .wrap{padding:0 20px}
+      header{padding:14px 0 15px}
+      .brand{font-size:17px;letter-spacing:.22em}
+      .brand small{font-size:9px;margin-top:7px;letter-spacing:.15em}
       .hero{
-        min-height:720px;
+        min-height:0;
         background:
-          linear-gradient(180deg,rgba(7,6,5,.32),rgba(7,6,5,.96) 68%),
-          url('hero-postazione.png') 69% top / auto 58% no-repeat;
+          linear-gradient(180deg,rgba(8,7,5,.04) 0%,rgba(8,7,5,.16) 33%,rgba(8,7,5,.72) 58%,rgba(8,7,5,.96) 100%),
+          url('hero-postazione.png') 69% top / auto 52% no-repeat;
       }
+      .hero:after{height:18vh;background:linear-gradient(180deg,transparent,rgba(8,7,5,.78))}
       .hero-inner{
         position:relative;
         left:auto;
         top:auto;
         transform:none;
-        padding:340px 18px 58px;
+        padding:300px 20px 42px;
         width:100%;
         animation:none;
       }
-      h1{font-size:42px}
-      .lead{font-size:18px}
-      .copy{font-size:18px}
-      .steps{grid-template-columns:1fr}
-      .cta{align-items:flex-start}
-      .btn{width:auto}
+      .eyebrow{font-size:11px;letter-spacing:.22em;margin-bottom:12px}
+      h1{font-size:38px;line-height:.96}
+      h2{font-size:38px;line-height:1.03}
+      .lead{font-size:16.5px;line-height:1.5;margin-top:20px;max-width:330px}
+      .cta{gap:10px;margin-top:24px;align-items:flex-start}
+      .btn{width:auto;min-height:44px;padding:0 18px;font-size:11px;letter-spacing:.13em}
+      section{padding:48px 0}
+      .grid-2{gap:26px}
+      .copy{font-size:17px;line-height:1.56}
+      .copy p{margin:18px 0}
+      .visual{padding:8px;box-shadow:0 14px 44px rgba(0,0,0,.32)}
+      .steps{grid-template-columns:1fr;margin-top:24px}
+      .step{padding:22px 0 0}
+      .step b{margin-bottom:9px;font-size:11px}
+      .step span{font-size:16.5px;line-height:1.44}
+      #boccetta .grid-2 > .visual{order:2}
+      #boccetta .grid-2 > div:not(.visual){order:1}
+      #boccetta .visual img{max-height:430px;object-fit:cover;object-position:center}
+      .contact{padding-top:52px;padding-bottom:46px}
+      form{gap:12px}
+      input,textarea,select{padding:13px 13px;font-size:15.5px;min-height:52px}
+      textarea{min-height:116px}
+      .fine{font-size:11.5px}
+      footer{padding:22px 0;font-size:13px}
     }
   </style>
 </head>
