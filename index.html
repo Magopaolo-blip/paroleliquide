@@ -22,7 +22,7 @@
     .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
     header{
       position:fixed;inset:0 0 auto 0;z-index:20;
-      background:linear-gradient(180deg,rgba(9,8,6,.92),rgba(9,8,6,.42),transparent);
+      background:linear-gradient(180deg,rgba(9,8,6,.96),rgba(9,8,6,.50),transparent);
       padding:22px 0 34px;
     }
     .nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
@@ -39,12 +39,12 @@
     .hero{
       min-height:100vh;
       background:
-        linear-gradient(90deg,rgba(9,8,6,.88) 0%,rgba(9,8,6,.70) 28%,rgba(9,8,6,.22) 58%,rgba(9,8,6,.16) 100%),
+        linear-gradient(90deg,rgba(9,8,6,.94) 0%,rgba(9,8,6,.84) 26%,rgba(9,8,6,.46) 48%,rgba(9,8,6,.16) 72%,rgba(9,8,6,.12) 100%),
         url('hero-postazione.png') center center / cover no-repeat;
       display:flex;align-items:center;
     }
     .hero-inner{padding:140px 0 90px;max-width:520px}
-    h1{margin:0;font-size:clamp(44px,6vw,78px);line-height:1.02;font-weight:400}
+    h1{margin:0;font-size:clamp(46px,6vw,82px);line-height:1.02;font-weight:400}
     .eyebrow{color:var(--gold);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
     .lead{margin:28px 0 0;font-size:22px;line-height:1.6;color:var(--muted)}
     .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
@@ -73,7 +73,7 @@
       header{position:static;padding:18px 0}
       .navlinks{display:none}
       .hero{min-height:auto;background-position:center center}
-      .hero-inner{padding:58px 0 64px}
+      .hero-inner{padding:58px 0 64px;max-width:100%}
       .grid-2{grid-template-columns:1fr;gap:28px}
       section{padding:62px 0}
       .steps{grid-template-columns:1fr 1fr}
@@ -86,8 +86,8 @@
       .cta{flex-direction:column;align-items:flex-start}
       .hero{
         background:
-          linear-gradient(180deg,rgba(9,8,6,.56),rgba(9,8,6,.96)),
-          url('hero-postazione.png') center center / cover no-repeat;
+          linear-gradient(180deg,rgba(9,8,6,.60),rgba(9,8,6,.97)),
+          url('hero-postazione.png') 68% center / cover no-repeat;
       }
     }
   </style>
